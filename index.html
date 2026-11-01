@@ -13,38 +13,7 @@
 </head>
 <body>
   <div class="page-shell">
-    <header class="site-header" id="top">
-      <div class="container nav-wrap">
-        <a href="#top" class="brand" aria-label="R. Araújo Distribuidora">
-          <img class="brand-logo" src="assets/logo-ra-araujo.webp" width="56" height="62" alt="" />
-          <span>
-            <strong>R. ARAÚJO</strong>
-            <small>DISTRIBUIDORA</small>
-          </span>
-        </a>
-
-        <div class="search-wrap">
-          <input id="searchInput" type="search" placeholder="O que sua empresa precisa hoje?" aria-label="Buscar produtos" />
-          <button id="searchBtn" aria-label="Buscar"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m16 16 5 5"/></svg></button>
-        </div>
-
-        <nav class="main-nav" id="mainNav">
-          <a href="categorias.html">Categorias</a>
-          <a href="marcas.html">Marcas</a>
-          <a href="destaques.html">Destaques</a>
-          <a href="atacado.html">Atacado</a>
-          <a href="institucional.html">Institucional</a>
-        </nav>
-
-        <div class="nav-actions">
-          <button class="ghost-icon" aria-label="Conta"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21v-2a8 8 0 0 1 16 0v2"/></svg></button>
-          <button class="ghost-icon cart-button" aria-label="Abrir carrinho">
-            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3h2l3 12h11l3-8H6"/><circle cx="9" cy="20" r="1"/><circle cx="18" cy="20" r="1"/></svg> <span id="cartCount">0</span>
-          </button>
-          <button class="menu-btn" id="menuBtn" aria-label="Abrir menu" aria-controls="mainNav" aria-expanded="false"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
-        </div>
-      </div>
-    </header>
+    <script src="header.js"></script>
 
     <main>
       <section class="hero">
@@ -69,9 +38,9 @@
 
           <div class="hero-scene" aria-label="Seleção de produtos do catálogo R. Araújo">
             <div class="halo"></div>
-            <div class="hero-photo hero-photo-main"><img src="assets/products/drive/x4-jpg.jpg" width="620" height="777" alt="Saco kraft liso Vinco para delivery" fetchpriority="high"><span>Embalagens que valorizam.</span></div>
-            <div class="hero-photo hero-photo-food"><img src="assets/products/drive/x1.jpg" width="575" height="524" alt="Queijo parmesão RAR Gastronomia"><span>Sabor que faz a diferença.</span></div>
-            <div class="hero-photo hero-photo-care"><img src="assets/products/drive/x3.jpg" width="480" height="630" alt="Pano multiuso Seca+ Vabene"><span>Cuidado em cada detalhe.</span></div>
+            <div class="hero-product hero-product-main"><img src="assets/products/hero-kraft.webp" width="1120" height="1404" alt="Saco kraft liso Vinco para delivery" fetchpriority="high"><span>Embalagens que valorizam.</span></div>
+            <div class="hero-product hero-product-food"><img src="assets/products/hero-parmesao.webp" width="1314" height="1197" alt="Queijo parmesão RAR Gastronomia"><span>Sabor que faz a diferença.</span></div>
+            <div class="hero-product hero-product-care"><img src="assets/products/hero-pano.webp" width="1095" height="1437" alt="Pano multiuso Seca+ Vabene"><span>Cuidado em cada detalhe.</span></div>
             <div class="hero-note">Qualidade que<br>distribui confiança.</div>
             <a class="catalog-pill" href="CATALOGO_FRB_DISTRIBUIDORA_VERSAO_2026.pdf" target="_blank" rel="noopener">Catálogo 2026 <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6"/></svg></a>
           </div>
@@ -91,7 +60,7 @@
 
           <div class="category-grid">
             <a href="#featured" class="category-card category-cleaning" data-category-filter="higiene">
-              <img class="category-photo" src="assets/products/drive/x3.jpg" alt="Pano multiuso Vabene" loading="lazy">
+              <img class="category-photo" src="assets/categories/higiene-limpeza.webp" alt="Materiais de limpeza profissional organizados" loading="lazy">
               <div class="shade"></div>
               <span class="cat-index">01</span>
               <h3>Higiene &<br>Limpeza</h3>
@@ -99,7 +68,7 @@
               <span class="card-link">Ver produtos →</span>
             </a>
             <a href="#featured" class="category-card category-food" data-category-filter="gastro">
-              <img class="category-photo" src="assets/products/drive/x1.jpg" alt="Queijo parmesão RAR" loading="lazy">
+              <img class="category-photo" src="assets/categories/gastronomia.webp" alt="Ingredientes frescos para gastronomia" loading="lazy">
               <div class="shade"></div>
               <span class="cat-index">02</span>
               <h3>Gastronomia</h3>
@@ -107,7 +76,7 @@
               <span class="card-link">Ver produtos →</span>
             </a>
             <a href="#featured" class="category-card category-packaging" data-category-filter="embalagem">
-              <img class="category-photo" src="assets/products/drive/x4-jpg.jpg" alt="Embalagem kraft Vinco" loading="lazy">
+              <img class="category-photo" src="assets/categories/embalagens.webp" alt="Embalagens de papel kraft para alimentos" loading="lazy">
               <div class="shade"></div>
               <span class="cat-index">03</span>
               <h3>Embalagens</h3>
@@ -115,7 +84,7 @@
               <span class="card-link">Ver produtos →</span>
             </a>
             <a href="#featured" class="category-card category-health" data-category-filter="saude">
-              <img class="category-photo" src="assets/products/drive/x5-jpg.jpg" alt="Luvas nitrílicas Vabene" loading="lazy">
+              <img class="category-photo" src="assets/categories/estetica-saude.webp" alt="Itens de proteção e cuidado profissional" loading="lazy">
               <div class="shade"></div>
               <span class="cat-index">04</span>
               <h3>Estética & Saúde</h3>
@@ -123,7 +92,7 @@
               <span class="card-link">Ver produtos →</span>
             </a>
             <a href="#featured" class="category-card category-disposables" data-category-filter="descartavel">
-              <img class="category-photo" src="assets/products/drive/x6-jpg.jpg" alt="Assadeiras de alumínio Vabene" loading="lazy">
+              <img class="category-photo" src="assets/categories/descartaveis.webp" alt="Copos, bandejas e talheres descartáveis" loading="lazy">
               <div class="shade"></div>
               <span class="cat-index">05</span>
               <h3>Descartáveis</h3>
@@ -175,43 +144,43 @@
           <div class="catalog-status"><p id="resultsCount" role="status" aria-live="polite">7 produtos no catálogo</p><button id="clearFilters" type="button" hidden>Limpar filtros</button></div>
           <div class="product-grid" id="productGrid">
             <article class="product-card" data-category="gastro" data-brand="RAR Gastronomia" data-name="Semente de Coentro Feltrin">
-              <div class="product-visual"><span class="badge">Gastronomia</span><img src="assets/products/drive/x1.jpg" alt="Semente de Coentro Feltrin — RAR Gastronomia" loading="lazy" width="400" height="400"></div>
+              <div class="product-visual"><span class="badge">Gastronomia</span><img src="assets/products/coentro-feltrin.webp" alt="Semente de Coentro Feltrin — RAR Gastronomia" loading="lazy" width="1090" height="1443"></div>
               <div class="product-info"><span class="product-brand">RAR Gastronomia</span><h3>Semente de Coentro Feltrin</h3><p>Forma inteira de 12 kg. Tradição e sabor para sua cozinha.</p>
                 <div class="product-bottom"><div><small>Forma de 12 kg</small><strong>R$ 899,90</strong></div><button class="add-btn" aria-label="Adicionar Semente de Coentro Feltrin ao carrinho"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg> <span class="add-label">Adicionar ao carrinho</span></button></div>
               </div>
             </article>
             <article class="product-card" data-category="gastro" data-brand="Hecke Import" data-name="Semente de Coentro Feltrin — Caixa">
-              <div class="product-visual"><span class="badge">Seleção especial</span><img src="assets/products/drive/x2.jpg" alt="Semente de Coentro Feltrin — Caixa — Hecke Import" loading="lazy" width="400" height="400"></div>
+              <div class="product-visual"><span class="badge">Seleção especial</span><img src="assets/products/coentro-feltrin-caixa.webp" alt="Semente de Coentro Feltrin — Caixa — Hecke Import" loading="lazy" width="1039" height="1513"></div>
               <div class="product-info"><span class="product-brand">Hecke Import</span><h3>Semente de Coentro Feltrin — Caixa</h3><p>Azeite Nucete. Embalagem de 500 ml; caixa com 12 unidades.</p>
                 <div class="product-bottom"><div><small>Por unidade</small><strong>R$ 34,90</strong></div><button class="add-btn" aria-label="Adicionar Semente de Coentro Feltrin — Caixa ao carrinho"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg> <span class="add-label">Adicionar ao carrinho</span></button></div>
               </div>
             </article>
             <article class="product-card" data-category="higiene" data-brand="Vabene" data-name="Semente de Coentro Feltrin — Expositor">
-              <div class="product-visual"><span class="badge">Higiene profissional</span><img src="assets/products/drive/x3.jpg" alt="Semente de Coentro Feltrin — Expositor — Vabene" loading="lazy" width="400" height="400"></div>
+              <div class="product-visual"><span class="badge">Higiene profissional</span><img src="assets/products/coentro-feltrin-expositor.webp" alt="Semente de Coentro Feltrin — Expositor — Vabene" loading="lazy" width="1166" height="1349"></div>
               <div class="product-info"><span class="product-brand">Vabene</span><h3>Semente de Coentro Feltrin — Expositor</h3><p>Rolo com 600 panos de 40 × 28 cm. Praticidade para a rotina.</p>
                 <div class="product-bottom"><div><small>Rolo com 600 panos</small><strong>R$ 69,90</strong></div><button class="add-btn" aria-label="Adicionar Semente de Coentro Feltrin — Expositor ao carrinho"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg> <span class="add-label">Adicionar ao carrinho</span></button></div>
               </div>
             </article>
-            <article class="product-card" data-category="embalagem" data-brand="Vinco" data-name="Máscara Cirúrgica Tripla Rosa">
-              <div class="product-visual"><span class="badge">Para delivery</span><img src="assets/products/drive/x4-jpg.jpg" alt="Máscara Cirúrgica Tripla Rosa — Vinco" loading="lazy" width="400" height="400"></div>
+            <article class="product-card mask-product" data-category="embalagem" data-brand="Vinco" data-name="Máscara Cirúrgica Tripla Rosa">
+              <div class="product-visual"><span class="badge">Para delivery</span><img src="assets/products/mascara-rosa.webp" alt="Máscara Cirúrgica Tripla Rosa — Vinco" loading="lazy" width="1774" height="887"></div>
               <div class="product-info"><span class="product-brand">Vinco</span><h3>Máscara Cirúrgica Tripla Rosa</h3><p>Sem personalização. Disponível nos tamanhos PP, P, M e G.</p>
                 <div class="product-bottom"><div><small>Por unidade</small><strong>R$ 1,49</strong></div><button class="add-btn" aria-label="Adicionar Máscara Cirúrgica Tripla Rosa ao carrinho"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg> <span class="add-label">Adicionar ao carrinho</span></button></div>
               </div>
             </article>
-            <article class="product-card" data-category="saude" data-brand="Vabene" data-name="Máscara Cirúrgica Tripla Rosa — Caixa">
-              <div class="product-visual"><span class="badge">Proteção</span><img src="assets/products/drive/x5-jpg.jpg" alt="Máscara Cirúrgica Tripla Rosa — Caixa — Vabene" loading="lazy" width="400" height="400"></div>
+            <article class="product-card mask-product" data-category="saude" data-brand="Vabene" data-name="Máscara Cirúrgica Tripla Rosa — Caixa">
+              <div class="product-visual"><span class="badge">Proteção</span><img src="assets/products/mascara-rosa-caixa.webp" alt="Máscara Cirúrgica Tripla Rosa — Caixa — Vabene" loading="lazy" width="2172" height="724"></div>
               <div class="product-info"><span class="product-brand">Vabene</span><h3>Máscara Cirúrgica Tripla Rosa — Caixa</h3><p>Caixa com 100 unidades. Tamanhos P, M, G e GG.</p>
                 <div class="product-bottom"><div><small>Caixa com 100 unidades</small><strong>R$ 39,90</strong></div><button class="add-btn" aria-label="Adicionar Máscara Cirúrgica Tripla Rosa — Caixa ao carrinho"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg> <span class="add-label">Adicionar ao carrinho</span></button></div>
               </div>
             </article>
             <article class="product-card" data-category="saude" data-brand="Talge Beauty" data-name="Toalha Compacta">
-              <div class="product-visual"><span class="badge">Estética & cuidado</span><img src="assets/products/toalha-compacta.webp" alt="Toalha Compacta — Talge Beauty" loading="lazy" width="400" height="400"></div>
+              <div class="product-visual"><span class="badge">Estética & cuidado</span><img src="assets/products/toalha-compacta-recorte.webp" alt="Toalha Compacta — Talge Beauty" loading="lazy" width="1011" height="1556"></div>
               <div class="product-info"><span class="product-brand">Talge Beauty</span><h3>Toalha Compacta</h3><p>100% viscose. Toalha de 20 × 22 cm; pacote com 50 unidades.</p>
                 <div class="product-bottom"><div><small>Pacote com 50 unidades</small><strong>R$ 24,90</strong></div><button class="add-btn" aria-label="Adicionar Toalha Compacta ao carrinho"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg> <span class="add-label">Adicionar ao carrinho</span></button></div>
               </div>
             </article>
-            <article class="product-card" data-category="descartavel" data-brand="Vabene" data-name="Máscara Cirúrgica Tripla Preta">
-              <div class="product-visual"><span class="badge">Praticidade</span><img src="assets/products/drive/x6-jpg.jpg" alt="Máscara Cirúrgica Tripla Preta — Vabene" loading="lazy" width="400" height="400"></div>
+            <article class="product-card mask-product" data-category="descartavel" data-brand="Vabene" data-name="Máscara Cirúrgica Tripla Preta">
+              <div class="product-visual"><span class="badge">Praticidade</span><img src="assets/products/mascara-preta.webp" alt="Máscara Cirúrgica Tripla Preta — Vabene" loading="lazy" width="1774" height="887"></div>
               <div class="product-info"><span class="product-brand">Vabene</span><h3>Máscara Cirúrgica Tripla Preta</h3><p>Modelos ovais e retangulares para preparo e conservação.</p>
                 <div class="product-bottom"><div><small>Por unidade</small><strong>R$ 8,90</strong></div><button class="add-btn" aria-label="Adicionar Máscara Cirúrgica Tripla Preta ao carrinho"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg> <span class="add-label">Adicionar ao carrinho</span></button></div>
               </div>

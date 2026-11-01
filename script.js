@@ -1,5 +1,3 @@
-const menuBtn = document.getElementById('menuBtn');
-const mainNav = document.getElementById('mainNav');
 const toast = document.getElementById('toast');
 const searchInput = document.getElementById('searchInput');
 const cards = [...document.querySelectorAll('.product-card')];
@@ -17,15 +15,6 @@ let paymentPending = false;
 let orderNumber = 0;
 let lastOrder = null;
 const normalize = value => value.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
-
-function setMenu(open) {
-  mainNav.classList.toggle('open', open);
-  menuBtn.setAttribute('aria-expanded', String(open));
-  menuBtn.setAttribute('aria-label', open ? 'Fechar menu' : 'Abrir menu');
-}
-menuBtn.addEventListener('click', () => setMenu(!mainNav.classList.contains('open')));
-mainNav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => setMenu(false)));
-document.addEventListener('keydown', event => { if (event.key === 'Escape') setMenu(false); });
 
 function showToast(message) {
   toast.textContent = message;
@@ -81,6 +70,12 @@ function runSearch() { state.term = searchInput.value.trim(); applyFilters(); go
 document.getElementById('searchBtn').addEventListener('click', runSearch);
 searchInput.addEventListener('input', () => { state.term = searchInput.value.trim(); applyFilters(); });
 searchInput.addEventListener('keydown', event => { if (event.key === 'Enter') runSearch(); });
+const requestedSearch = new URLSearchParams(location.search).get('busca');
+if (requestedSearch) {
+  searchInput.value = requestedSearch;
+  state.term = requestedSearch;
+  applyFilters();
+}
 
 const dialog = document.getElementById('cartDialog');
 const cartButton = document.querySelector('.cart-button');
@@ -209,6 +204,11 @@ function showCartStep(step) {
   document.getElementById('cartTitle').focus();
 }
 cartButton.addEventListener('click', () => { renderSelection(); dialog.showModal(); showCartStep('cartView'); });
+if (new URLSearchParams(location.search).get('carrinho') === '1') {
+  renderSelection();
+  dialog.showModal();
+  showCartStep('cartView');
+}
 document.getElementById('closeCart').addEventListener('click', () => { if (!paymentPending) dialog.close(); });
 dialog.addEventListener('cancel', event => { if (paymentPending) event.preventDefault(); });
 document.getElementById('clearCart').addEventListener('click', () => { selection.clear(); renderSelection(); });
