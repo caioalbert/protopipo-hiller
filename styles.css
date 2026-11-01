@@ -118,6 +118,10 @@ button{cursor:pointer}
 .section-heading{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:30px}
 .section-heading.compact{align-items:center}
 .section-heading h2,.values-title h2{font-size:42px;margin:7px 0 6px;letter-spacing:-.025em}
+.h1-page{font:600 clamp(44px,6vw,76px)/1.02 "Playfair Display",serif;margin:18px 0 12px;color:var(--green-950);letter-spacing:-.03em}
+.page-lead{max-width:650px;color:var(--muted);font-size:18px;line-height:1.7;margin:0 0 36px}
+.business-section .h1-page{color:#fff}
+.business-section .page-lead{color:#cbd8d2}
 .section-heading p{margin:0;color:var(--muted)}
 .link-arrow{font-size:13px;font-weight:700;color:var(--green-800)}
 
